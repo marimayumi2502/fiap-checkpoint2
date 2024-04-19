@@ -1,0 +1,22 @@
+package br.com.fiap.checkpoint2.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "consultas")
+public class Consultas extends AbstractEntity<Long> {
+
+	@ManyToOne
+	@JoinColumn(name = "paciente_id_fk", nullable = false)
+	private Paciente paciente_id;
+	
+	@OneToOne
+	@JoinColumn(name = "endereco_id_fk", nullable = false)
+	private Profissionais profissional_id;
+
+}

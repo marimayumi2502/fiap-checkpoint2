@@ -1,0 +1,19 @@
+package br.com.fiap.checkpoint2.model;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "pacientes")
+public class Pacientes {
+	
+	String nome;
+	String endereco;
+	String bairro;
+	String email;
+	LocalDate data_nascimento;
+	String telefone;
+
+}
